@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.glow {
+  font-size: 70px;
+  color:  white;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px gold, 0 0 20px orange, 0 0 30px gold, 0 0 40px seagreen, 0 0 50px gold, 0 0 60px peachpuff, 0 0 70px black;
+    }
+
+    to {
+      text-shadow: 0 0 20px gold, 0 0 30px orange, 0 0 40px peachpuff, 0 0 50px yellow, 0 0 60px gold , 0 0 70px orange, 0 0 80px gold;
+    }
+  }
+
+.flip-box {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #15203E;
+  color: white;
+  transform: rotateY(180deg);
+}
+p1{
+  font-family: 'Niconne', cursive;
+  color: #E3CEF6;
+  font-size: 30px;
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+ul {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #58A4D4;
+}
+/* location of the nav bar   */
+li {
+ float: left;
+}
+/* nav bar choices   */
+li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+/* hovercolor   */
+li a:hover {
+ background-color: #E3CEF6;
+}
+/* font   */
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+}
+
+.column {
+  float: left;
+  padding: 4px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+
+ <div>
+   <ul>
+     <li><a "navbuttons" href = "horoscope.html">Home </a></li>
+     <li><a "navbuttons" href = "current.html"> Current Issues </a></li>
+     <li><a "navbuttons" href = "do.html"> Do's & Don'ts </a></li>
+     <li><a "navbuttons" href = "inspiration.html"> Inspirational Wall </a></li>
+     <li><a "navbuttons" href = "date.html"> Horoscopes </a></li>
+     <li><a "navbuttons" href = "about.html"> About Us </a></li>
+     <li><a "navbuttons" href = "contact.html"> Contact Us </a></li>
+
+
+   </ul>
+ </div>
+
+
+<head>
+  <link rel="stylesheet" href="horo.css">
+  <link href="https://fonts.googleapis.com/css?family=Niconne|Sacramento|Tangerine&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <br><h1 class="glow">Protectors of the Earth</h1>
+  <center><p1>Where you can make a difference today!</p1></center> <br>
+
+
+  <center> <img src = "horoscopewheel.png" width = 400> </center>
+  <center> <p1> Hover over your zodiac to see how you can help the Earth!</p1></center>
+
+<div class="row">
+  <div class="column">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="aquariuspic.png" alt="aquarius" style="height: 200px; width: 200px;" >
+        </div>
+        <div class="flip-box-back">
+          <h2>Aquarius</h2>
+          <h3>January 20 - February 18</h3>
+          <p><u>To help the Earth:</u></p>
+          <p>Get a houseplant!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+      <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="piscespic.png" alt="pisces" style="height: 200px; width: 200px;" >
+        </div>
+        <div class="flip-box-back">
+          <h2>Pisces</h2>
+          <h3>February 19 - March 20</h3>
+          <p><u>To help the Earth:</u></p>
+          <p>Get a bird feeder and birdbath!</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<div class="column">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="ariespic.png" alt="aries" style="height: 200px; width: 200px;" >
+        </div>
+        <div class="flip-box-back">
+          <h2>Aries</h2>
+          <h3>March 21 - April 19</h3>
+          <p><u>To help the Earth:</u></p>
+          <p>Cycle, bus, or bike this week!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="tauruspic.png" alt="taurus" style="height: 200px; width: 200px;" >
+        </div>
+        <div class="flip-box-back">
+          <h2>Taurus</h2>
+          <h3>April 20 - May 20</h3>
+          <p><u>To help the Earth:</u></p>
+          <p>Plant a tree this weekend!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="geminipic.png" alt="gemini" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Gemini</h2>
+        <h3>May 21 - June 20</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Bring a reusable bag while shopping today!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="cancerpic.png" alt="cancer" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Cancer</h2>
+        <h3>June 21 - July 22</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Buy a bamboo/paper straw!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="leopic.png" alt="leo" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Leo</h2>
+        <h3>July 23 - August 22</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Use a reuseable water bottle!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="virgopic.png" alt="virgo" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Virgo</h2>
+        <h3>August 23 - September 22</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Set a day to eat meatless every week!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="librapic.png" alt="libra" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Libra</h2>
+        <h3>September 23 - October 22</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Go thrifting!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src= "s.png" alt="scropio" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Scropio</h2>
+        <h3>October 23 - November 21</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Take a shower instead of a bath!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="sagittariuspic.png" alt="sagittarius" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Sagittarius</h2>
+        <h3>November 22-December 21</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Buy rechargeable batteries for your favorite products!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="capricornpic.png" alt="capricorn" style="height: 200px; width: 200px;" >
+      </div>
+      <div class="flip-box-back">
+        <h2>Capricorn</h2>
+        <h3>December 22 - January 19</h3>
+        <p><u>To help the Earth:</u></p>
+        <p>Copy and print on both sides of your papers!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
